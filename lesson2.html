@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Lesson 2 | WMCode </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="wavefavicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbarimg">
+                <a href="index.html" style="float: left; padding: 0; border: 0px solid black; background: none;">
+                    <img src="WMCODE Logo.png" alt="Wave-Image">
+                </a>
+            </div>
+            <a href="resources.html">Resources</a>
+            <a href="details.html">Competition Details</a>
+            <!-- <a href="#calendar">Calendar</a> -->
+            <a href="https://repl.it/" target="_blank" rel="noopener noreferrer">REPL</a>
+            <a href="https://drive.google.com/drive/folders/1l8EKATqJjpaJWB3Y5UlMwQqiWEPop5sF?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>
+        </div>
+
+        <div class="pagebody">
+            <h1> Lesson 2 </h1>
+            <!-- <h3> The second Python lesson of the year. </h3> -->
+            <h3> <a href="lesson2.zip" download> Download Lesson 2 Folder</a> </h3>
+
+            <hr>
+
+            <h2>Topics Covered:</h2>
+            <ul>
+                <li>A Review of Lesson 1</li>
+                <li>Assignment</li>
+                <li>An Intro to Functions</li>
+            </ul>
+
+            <h2>Lesson 2 Slides:</h2>
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQELueLHOSR69k8hUUuE275Yhce7Vm-nJKxXXlDBQYWim8nIA0cAsZw5b9CBHDt-hfrR7zafDxlOzLG/embed?start=false&loop=false&delayms=3000" frameborder="0" width="845" height="505" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+            <h2>Lesson 2 Recording:</h2>
+            <video src="recordings/lesson2.mp4" controls muted preload="auto" width="845px" height="505px">
+        </div>
+
+        <div class="pagebody">
+            <h2>Python Terminal:</h2>
+            Use this terminal to test the code below, and to experiment with the things in this lesson!
+            <b>IT MAY TAKE A MOMENT TO POP UP AND BE READY FOR USE</b>
+            <br>
+            To open the Python terminal:
+            <ul>
+                <li>Click the 'Shell' tab below</li>
+                <li>Type 'python3' (without the quotes) into the first line</li>
+                <li>Run code!</li>
+            </ul>
+            <b>NOTE:</b> Code will not auto-indent in the Python terminal, so you will have to use "tab" to indent
+            lines that need indentation.
+            <br>
+            <b>NOTE:</b> If the terminal does not let you keep typing in the, refresh the page and try again.
+            <br><br><br>
+            <iframe height="600px" width="80%" src="https://repl.it/@JesusEnriqueEnr/PiE-Terminal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        </div>
+
+        <div class="pagebody">
+            <h2>Lesson Content:</h2>
+
+            <h3>Operators Review:</h3>
+            Take a minute and go through each of these review problems. Do your best to figure out what Python would
+            interpret each expression to be.
+            <p>
+                <b>TRY THEM IN THE terminal BEFORE MOVING ON</b>
+            </p>
+            <pre>
+>>> 3 == 3.0
+___
+>>> 10 % 7
+___
+>>> 9739 % 10
+___
+>>> 84 / 12
+___
+>>> 5756 // 10
+___
+>>> 2 ** 4
+___
+>>> 75 % 5
+___</pre>
+            Solutions and Explanations:
+            <pre>
+>>> 3 == 3.0         # --> Both sides evaluate to the same value
+True
+>>> 10 % 7           # --> The remainder of division is 3
+3
+>>> 9739 % 10        # --> When you divide, 9 is left over. Any number % 10 will always give the last digit.
+9
+>>> 84 / 12          # --> Regular division outputs the decimal form
+7.0
+>>> 5756 // 10       # --> 5756 / 10 = 575.6 --> Floor division by 10 will always cut off the last digit
+575
+>>> 2 ** 4           # --> 2 * 2 * 2 * 2
+32
+>>> 75 % 5           # --> There is no remainder because 5 goes into 75 evenly
+0</pre>
+            Now, you may ask: How does Python evaluate these math operations? The answer is quite simple. We, implicitly, take
+            the exact same steps as Python. They are:
+            <ol>
+                <li>Evaluate the Operator --> the math symbol</li>
+                <li>Evaluate the Operands --> whatever is on either side of the symbol</li>
+                <li>Apply the Operator to the Operands --> Perform the operation</li>
+            </ol>
+
+            <h3>Assignment:</h3>
+            Assignment is how we <i>assign</i> a value to a variable or keyword in Python. An assignment is characterized by
+            three things:
+            <ul>
+                <li>A left side</li>
+                <li>A single equals sign</li>
+                <li>A right side</li>
+            </ul>
+
+            Python will read that assignment statement and take the following steps, in this exact order:
+            <ul>
+                <li>Evaluate whatever is on the right side</li>
+                <ul>
+                    <li>The order of execution of math operations, if it is a math expression, for example</li>
+                </ul>
+                <li>Assign that value to whatever variable or keyword is on the left</li>
+            </ul>
+            After this process, you can think of the variable or keyword as a <i>container</i> for whatever value was stored
+            within it. You can refer to this value simply by calling that variable. BUT you can change what is inside of each
+            of these containers by <i>reassigning</i> its value.
+
+            <p>
+                Use the terminal to experiment with assigment!!
+            </p>
+
+            <pre>
+>>> x = 49
+>>> y = 11
+>>> x + y
+60
+>>> x      # --> The operation that was executed does not change x's value
+49
+>>> y      # --> The operation that was executed does not change y's value
+11
+>>> w = (x * y) - (x + y)
+>>> w
+479
+>>> (w // 10) - x + y      # --> Values of w, x, and y never changed
+9
+>>> x = w           # --> Reassignment
+>>> y = w // y      # --> Reassignment
+>>> x
+479
+>>> y
+43
+>>> w      # --> NOTE: w's value never changed
+479</pre>
+
+            <h3>Intro to Functions:</h3>
+            Functions are a way of working with unknown values, and producing a desired output.
+            <br><br>
+            Functions have a name and a body, where operations are carried out
+            <br><br>
+            See Lesson 3 for more on functions!!!
+
+            <h1>...</h1>
+        </div>
+
+        <footer class="pagebody">
+            <hr>
+            <h2 style="text-align: center;">Contact Jesus:</h2>
+            <h3 style="text-align: center;"><a href="mailto:jvillalobos@stu.mwacademy.org"> EMAIL </a></h3>
+            <h1> ... </h1>
+        </footer>
+
+    </body>
+</html>

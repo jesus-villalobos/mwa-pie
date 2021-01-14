@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Lesson 1 | WMCode </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="wavefavicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbarimg">
+                <a href="index.html" style="float: left; padding: 0; border: 0px solid black; background: none;">
+                    <img src="WMCODE Logo.png" alt="Wave-Image">
+                </a>
+            </div>
+            <a href="resources.html">Resources</a>
+            <a href="details.html">Competition Details</a>
+            <!-- <a href="#calendar">Calendar</a> -->
+            <a href="https://repl.it/" target="_blank" rel="noopener noreferrer">REPL</a>
+            <a href="https://drive.google.com/drive/folders/1l8EKATqJjpaJWB3Y5UlMwQqiWEPop5sF?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>
+        </div>
+
+        <div class="pagebody">
+            <h1> <b>Lesson 1</b> </h1>
+            <!-- <h3> The first Python lesson of the year. </h3> -->
+            <h3> <a href="lesson1.zip" download> Download Lesson 1 Folder</a> </h3>
+
+            <hr>
+
+            <h2>Topics Covered:</h2>
+            <p>
+                This lesson goes through a second introduction to the Pioneers in Engineering organization, and looks to
+                welcome everyone to the team. As an introduction to the Python coding language, information
+                covered includes:
+                <ul>
+                    <li>Types</li>
+                    <li>Type Conversions</li>
+                    <li>Python Math Operators</li>
+                </ul>
+                Find additional information to these topics below, and on the Google Slides!!
+            </p>
+            <h2>Lesson 1 Slides:</h2>
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYmnk6223I4mOvj3W1sfjBHhv3ZEVM4UgO2SHqLfsP21qjG_3QpmLSiUfkAtQYp67pxfZXla4Yz6dL/embed?start=false&loop=false&delayms=3000" frameborder="0" width="845" height="505" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+        <div class="pagebody">
+            <h2>Python Terminal:</h2>
+            Use this terminal to test the code below, and to experiment with the things in this lesson!
+            <b>IT MAY TAKE A MOMENT TO POP UP AND BE READY FOR USE</b>
+            <br>
+            To open the Python terminal:
+            <ul>
+                <li>Click the 'Shell' tab below</li>
+                <li>Type 'python3' (without the quotes) into the first line</li>
+                <li>Run code!</li>
+            </ul>
+            <b>NOTE:</b> Code will not auto-indent in the Python terminal, so you will have to use "tab" to indent
+            lines that need indentation.
+            <br>
+            <b>NOTE:</b> If the terminal does not let you keep typing in the, refresh the page and try again.
+            <br><br><br>
+            <iframe height="600px" width="80%" src="https://repl.it/@JesusEnriqueEnr/PiE-Terminal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        </div>
+
+        <div class="pagebody">
+            <h2>Lesson Content:</h2>
+
+            <h3>Types:</h3>
+
+            In Python, "types" are names that refer to certain kinds of things within the language. For the purposes of these
+            lessons, we will focus on two types:
+            <ul>
+                <li>Text Types</li>
+                <li>Numeric Types</li>
+            </ul>
+
+            <h3>Text Types:</h3>
+            The Text Type is encapsulated by the <b>string</b>. Strings are they way that Python developers use plain words within
+            code. Strings carry meaning within them, and are used to interface with the user. A string is text that is found within
+            either single OR double quotes; it does not matter, as long as either side of a string has the same kind. Strings
+            also have some special functions associated with them:
+            <ul>
+                <li>
+                    To ask Python if something is a string, you can input it into the special
+                    <b style="color: blue;">type()</b> method.
+                </li>
+                <li>
+                    To convert something to a string, you can use the special <b style="color: blue;">str()</b> method.
+                </li>
+            </ul>
+            Try these things in the terminal above!!
+            <p>
+                <b>NOTE:</b> A comment is NOT considered a string. A comment is used only in the script of code, but is never run
+                by the terminal. Comments are identified by one pound symbol, #, or wrapped in triple quotes, """.
+            </p>
+            <pre>
+# This is a comment. It will not be run.
+# Neither will this one. The symbol comments out one line at a time.
+
+"""This is also a comment"""
+"""A pound in here, #, does not matter because it is already commented out."""
+
+"This is a string."
+'So is this.'
+# ---> Either double or single quotes work.
+
+"A pound in here, #, does nothing because it is being interpreted as plain English."
+
+>>> str(3)
+'3'
+>>> str(909230934)
+'909230934'
+>>> type("Hello World")
+< class 'str'>           --> 'str' stands for 'string'</pre>
+
+            <h3>Numeric Types:</h3>
+            There are two different kinds of numbers that fall into the numeric type:
+            <ul>
+                <li>Integer, int</li>
+                <ul>
+                    <li>The int is any whole number.</li>
+                </ul>
+                <li>Floating Point Number, float</li>
+                <ul>
+                    <li>The float is ANY number with a decimal point, no matter how many digits come after it.</li>
+                </ul>
+            </ul>
+            Python uses instances of the numeric type to perform math calculations, and carry meaning between different
+            parts of programs. ints and floats can be used simultaneously in math operations, but there are certain points
+            where it becomes useful to use one kind or the other.
+
+            <p>
+                You can use special instances of Python functions to convert between either type. These are the <b>int()</b>
+                and <b>float()</b> functions.
+            </p>
+
+            Numbers also have some special functions associated with them:
+            <ul>
+                <li>
+                    To ask Python if something is a number (float or int), you can input it into the special
+                    <b style="color: blue;">type()</b> method.
+                </li>
+                <li>
+                    To convert a number to a float or int, you can use the special <b style="color: blue;">float()</b> or
+                    <b style="color: blue;">int()</b> methods, respectively.
+                </li>
+            </ul>
+            Try these things in the terminal above!!
+
+            <pre>
+# NOTE: the three arrows represent Python input, and the line after it is the output.
+
+>>> type(39.07)
+< class 'float'>
+>>> type(9839483)
+< class 'int'>
+
+"""To convert between either type:"""
+
+>>> float(76)  # int --> float
+76.0
+>>> float(4)   # int --> float
+4.0
+
+>>> int(36.97)    # float --> int
+36
+>>> int(3.141592658597373982308940934)     # float --> int
+3</pre>
+
+            <h3>Python Math Operators:</h3>
+            In Python, we use the same ol' math operations used in everyday math, plus 3 addition functions. The full list
+            of operations, and their symbol is:
+            <ul>
+                <li>Addition, +</li>
+                <li>Subtraction, -</li>
+                <li>Multiplication, *</li>
+                <li>Division, /</li>
+                <li>Power, **</li>
+                <li>Floor Division, //</li>
+                <li>Modulus, %</li>
+                <li>Equality, ==</li>
+            </ul>
+            The three new operations are <b>Floor Division</b>, <b>Modulus</b>, and <b>Equality</b>. Here is a description
+            of each, along with a few examples.
+
+            <p>
+                <b>Floor Division, //</b> is the same as regular division, it simply cuts off everything after the decimal point
+                if there is anything.
+                <br>
+                <b>Modulus, %</b> returns the remainder of division. You can think about it as "lazy division" because it
+                ignores performing long division into decimal places, and just spits out the remainder.
+                <br>
+                <b>Equality, ==</b> returns whether two things are equal to each other. The output will always be either
+                <i>True</i> or <i>False</i>.
+            </p>
+            <pre>
+"""Familiar Operations:"""
+>>> 2 + 3
+5
+>>> 2 - 3
+-1
+>>> 2 * 3
+6
+>>> 6 / 3
+2.0
+>>> 3 ** 2
+9
+
+"""New Operations:"""
+>>> 6 // 3
+2
+>>> 13 // 3      --> 13 / 3 = 4.33333333
+4
+>>> 13 % 3       --> 13 / 3 = 4 with remainder 1
+1
+>>> 15 % 4       --> 15 / 4 = 3 with remainder 3
+3
+>>> 3 == 3.0     --> The type doesn't matter; they are equal regardless
+True
+>>> 567 == 36    --> They are obviously not equal
+False</pre>
+        </div>
+
+        <footer class="pagebody">
+            <hr>
+            <h2 style="text-align: center;">Contact Jesus:</h2>
+            <h3 style="text-align: center;"><a href="mailto:jvillalobos@stu.mwacademy.org"> EMAIL </a></h3>
+            <h1> ... </h1>
+        </footer>
+
+        <h1>... </h1>
+    </body>
+</html>
