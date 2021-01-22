@@ -10,7 +10,7 @@
         <div class="navbar">
             <div class="navbarimg">
                 <a href="index.html" style="float: left; padding: 0; border: 0px solid black; background: none;">
-                    <img src="WMCODE Logo.png" alt="Wave-Image">
+                    <img src="WMCODELogo.png" alt="Wave-Image">
                 </a>
             </div>
             <a href="resources.html">Resources</a>
@@ -23,23 +23,22 @@
         <div class="pagebody">
             <h1> Lesson 4 </h1>
             <!-- <h3> The third Python lesson of the year. </h3> -->
-            <h3> <a href="#" download> Download Lesson 4 Folder </a> </h3>
+            <h3> <a href="lesson4.zip" download> Download Lesson 4 Folder </a> </h3>
 
             <hr>
 
             <h2>Topics Covered:</h2>
             <ul>
-                <li>Review of Project 1</li>
+                <li>Review of Project 1 - Calculator</li>
                 <li>Functions, continued</li>
-                <li>.</li>
-                <li>.</li>
             </ul>
 
             <h2>Lesson 4 Slides:</h2>
-            <!-- insert slides -->
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRhuQOwdNTsFaWH2tf3KlJB2ysWB5vjbcUKOabIU1x_ZSVyxW-bTCpVe9nZg5jo_kHyuMC46IoNgegm/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="845" height="505" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
             <h2>Lesson 4 Recording:</h2>
-            <!-- insert recording -->
+            <img src="wavefavicon.png" height="400"></img>
 
         </div>
 
@@ -65,15 +64,178 @@
         <div class="pagebody">
             <h2>Lesson Content:</h2>
 
-            <h3>stuff lol</h3>
+            <h3>Calculator Review</h3>
+            An in-depth analysis of what is really happening in the calculator project.
+            <br><br>
+            Acceptable code for this project is:
+            <pre>
+def add(x, y):
+    """Docstring"""
+    added = x + y
+    return added
+
+def subtract(x, y):
+    """Docstring"""
+    subtracted = x - y
+    return subtracted
+
+def divide(x, y):
+    """Docstring"""
+    divided = x / y
+    return divided
+
+def divide_whole(x, y):
+    """Docstring"""
+    return x // y              --> NOTICE: It is acceptable to simply return the desired value
+
+def power(x, y):
+    """Docstring"""
+    return x ** y              --> NOTICE PT2: Assignment is not necessary
+
+def remainder(x, y):
+    """Docstring"""
+    return x % y               --> Simple returns are used more often
+</pre>
+
+            <h3>The Cardinal Rule:</h3>
+            <b style="color: blue;">IF YOU REPEAT YOURSELF MORE THAN ONCE, WRITE A FUNCION!!!</b>
+
+            <h3>Coding Practice:</h3>
+            A walk-through and demonstration of the power of functions. Important notes on how function
+            decomposition really cleans up code, and makes programming easier.
+
+            <h3>Demonstration Functions:</h3>
+            <pre>
+from operator import abs, add, mul
+
+def hypotenuse(x, y):
+    """Takes in the lengths of two triangle legs, and outputs the length of that
+    triangle's corresponding hypotenuse.
+
+    >>> hypotenuse(9, 12)
+    15
+    >>> hypotenuse(10, 14)
+    17
+    """
+    ##YOUR CODE HERE##
+
+def distance_between(x1, y1, x2, y2):
+    """The distance_between function takes in the x and y coordinates of two
+    points on a plane, and returns the distance between them. It may be useful
+    to write helper functions!
+
+    NOTE: Can distance be negative?
+
+    >>> distance_between(5, 5, 10, 10)
+    7.0710678118654755
+    >>> distance_between(0, 0, 20, 20)
+    26.8701
+    """
+    ##YOUR CODE HERE##
+
+def sqrt(x):
+    """The square root function takes in a single number, and returns its
+    square root.
+
+    >>> sqrt(49)
+    7
+    >>> sqrt(99)
+    9.9498743710662
+    """
+    ##YOUR CODE HERE##
+
+def square(x):
+    """Returns the squared value of the given term.
+
+    >>> square(9)
+    81
+    >>> square(8)
+    64
+    """
+    ##YOUR CODE HERE##
+            </pre>
+
+            <h3>Independent Practice / Exploration Functions:</h3>
+            <pre>
+def discriminant(a, b, c):
+    """The discriminant takes in the coefficients, a, b, and c, of a quadratic
+    function in the form (ax^2 + bx + c) and returns its discriminant
+
+    >>> discriminant(4, 2, 5)
+    -78
+    >>> discriminant(2, 3, 1)
+    1
+    """
+    ##YOUR CODE HERE##
+
+def right_triangle_area(base, height):
+    """Takes in the base and height of an arbitrary right triangle, and returns
+    the area of the given triangle.
+    Assume that all inputs produce a proper right triangle.
+
+    >>> right_triangle_area(10, 5)
+    25
+    >>> right_triangle_area(16, 8)
+    64
+    """
+    ##YOUR CODE HERE##
+
+def second_to_last(x):
+    """Takes in an arbitrary number, and returns the second digit from the right;
+    the second to last digit. Assume that all inputs have at least 2 digits.
+
+    >>> second_to_last(9893473478)
+    7
+    >>> second_to_last(64)
+    6
+    """
+    ##YOUR CODE HERE##
+
+def mul_second_to_lasts(num1, num2):
+    """Computes the second to last digits of two constants, num1 and num2, and
+    returns their value when multiplied together.
+
+    >>> mul_second_to_lasts(98348973, 98)     --> 7 * 9
+    63
+    >>> mul_second_to_lasts(18, 45823)        --> 1 * 2
+    2
+    """
+    ##YOUR CODE HERE##
+
+def feet_in_to_cm(feet, inches):
+    """Converts an arbitrary height in feet an inches to its equivalent in
+    centimeters. Consider using a helper function!
+    NOTE: One inch is equal to 2.54 centimeters.
+
+    >>> feet_in_to_cm(6, 5)
+    198.58
+    >>> feet_in_to_cm(98, 7)
+    3004.82
+    """
+    ##YOUR CODE HERE##
+
+def cm_helper(x):
+    """Takes in an argument x and returns its value after being multiplied by
+    a factor of 2.54.
+
+    Note where this function is.
+
+    >>> cm_helper(53)
+    55.54
+    """
+    ##YOUR CODE HERE##
+            </pre>
+            <h1>...</h1>
         </div>
 
-        <footer class="pagebody">
-            <hr>
-            <h2 style="text-align: center;">Contact Jesus:</h2>
-            <h3 style="text-align: center;"><a href="mailto:jvillalobos@stu.mwacademy.org"> EMAIL </a></h3>
-            <h1> ... </h1>
-        </footer>
+        <div class="footer">
+            <div class="footerbody">
+                <a>2021 | WMCode™</a>
+                <img src="wavefavicon.png" alt="WMCode-Logo">
+                <a href="mailto:jvillalobos@stu.mwacademy.org" style="float: right;">Contact Jesus</a>
+            </div>
+            <!-- <h1> ... </h1> -->
+        </div>
 
     </body>
 </html>

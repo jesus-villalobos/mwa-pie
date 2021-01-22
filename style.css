@@ -2,10 +2,12 @@ body {
     margin: 0px;
 }
 
-footer {
+/* footer {
     padding-top: 50px;
-    /* background-color: blue; */
-}
+    padding-bottom: 50px;
+    background-color: blue;
+}  */
+
 
 .navbar {
     /* float: right; */
@@ -57,6 +59,55 @@ footer {
 
 .navbarimg img:hover {
     background-color: none;
+}
+
+.footer {
+    position: relative;
+    background-color: #f2f4f7;
+    height: 50px;
+    width: 100%;
+    padding: 20px 0px 10px 0px;
+    /* box-sizing: border-box; */
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.footerbody {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer a {
+    float: left;
+    text-align: center;
+    padding: 10px 15px 20px 15px;
+    color: #8a95a6;
+    font: 17px "Arial", arial;
+    text-decoration: none;
+    /* margin-bottom: 15px; */
+    /* margin-top: 12px; */
+    /* border: 2px solid black; */
+}
+
+.footer a:hover {
+    /* background-color: white; */
+    color: black;
+    /* padding: 7px 10px;  */
+    font-size: 17px;
+}
+
+.footer img {
+    float: left;
+    height: 40px;
+    /* width: 45px; */
+    /* margin: 0 40px; */
+    position: relative;
+    left: 30%;
+    /* display: inline-block; */
 }
 
 iframe, video {
